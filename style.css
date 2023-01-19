@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    background-image: url(./images/road_image.jpg);
+    height: 100vh;
+    animation: roadMovement 1s infinite linear;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.young_man {
+    width: 200px;
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    animation: youngman 5s infinite linear;
+}
+
+.old_man {
+    width: 200px;
+    position: absolute;
+    bottom: 120px;
+    left: 500px;
+    animation: oldman 10s infinite linear;
+}
+
+@keyframes roadMovement {
+    0% {
+        background-position: bottom left;
+    }
+
+    100% {
+        background-position: bottom right;
+    }
+}
+
+@keyframes youngman {
+    0% {
+        left: 100px;
+    }
+
+    50% {
+        left: 900px;
+        bottom: 60px;
+    }
+}
+
+@keyframes oldman {
+    0% {
+        left: 500px;
+    }    
+
+    50% {
+        left: 800px;
+        bottom: 100px;
+    }
+}
